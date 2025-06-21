@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gods Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🪔 Gods Notes</h1>
+    <p>Create, organize, and protect your thoughts</p>
+  </header>
 
+  <section class="folder-section">
+    <label for="folderSelect">📁 Choose Folder:</label>
+    <select id="folderSelect">
+      <option value="Ram">🕉 Ram</option>
+      <option value="Shiv">🔱 Shiv</option>
+      <option value="Krishna">🎵 Krishna</option>
+      <option value="Work">💼 Work</option>
+      <option value="Personal">💖 Personal</option>
+    </select>
+  <!-- Custom folders will appear here -->
+    <button id="createFolderBtn">📂➕ Create Folder</button>
+    <button id="newNoteBtn">➕ Add Note</button>
+    <button id="exportBtn">📤 Export</button>
+    <input type="file" id="importFile" accept=".json" hidden />
+    <button id="importBtn">📥 Import</button>
+  </section>
+
+  <section id="notesContainer">
+    <!-- Notes will be rendered here -->
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="noteModal">
+    <div class="modal-box">
+      <textarea id="noteText" placeholder="Write your note here..."></textarea>
+      <div class="modal-actions">
+        <button id="saveNoteBtn">💾 Save</button>
+        <button id="cancelNoteBtn">❌ Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
